@@ -1,2 +1,6 @@
 # Webstorm:
 .idea
+
+# CSS
+*.css.map
+*.scss
