@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="zh">
   <head>
+    <meta content="width=device-width, initial-scale=0.75, maximum-scale=1.0, user-scalable=no" name="viewport">
     <link type="text/css" rel="stylesheet" href="css/task_12.css">
   </head>
   <body>
@@ -70,13 +71,16 @@
     <form>
       <input type="text" placeholder="点我宽度变化">
     </form>
-    <div class="banner"><span id="img1"></span><span id="img2"></span><span id="img3"></span>
+    <div class="banner">
+      <input type="radio" name="banner" id="img1" hidden checked="checked">
+      <input type="radio" name="banner" id="img4" hidden>
       <ul class="container">
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-      <div class="controller"><a href="#img1">1</a><a href="#img2">2</a><a href="#img3">3</a>
+      <div class="controller">
+        <label for="img4">4</label>
       </div>
     </div>
   </body>

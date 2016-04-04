@@ -1,16 +1,20 @@
 @charset "UTF-8";
 $img-height: 300px;
-$img-width: 500px;
+$img-width: 450px;
 $default-margin: 50px;
 * {
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 table {
   margin: $default-margin;
   font-family: 微软雅黑;
-  font-size: 2em;
+  font-size: 1.9rem;
   color: #000;
   td {
     padding: 5px;
@@ -43,11 +47,11 @@ form {
     border-radius: 0.6rem;
     padding: 0.6rem;
     outline: none;
-    width: 10em;
-    transition: 0.5s width;
+    max-width: 10em;
+    transition: 0.25s max-width;
   }
   input:focus {
-    width: 20em;
+    max-width: 13em;
     border-color: #6393ff;
   }
 
@@ -57,16 +61,16 @@ form {
   position: relative;
   margin: $default-margin;
   height: $img-height;
-  width: $img-width;
+  max-width: $img-width;
   overflow: hidden;
   ul.container {
+    list-style: none;
     position: relative;
     transition: 0.5s left;
     width: 3*$img-width;
     height: $img-height;
     li {
       float: left;
-      list-style: none;
       font-size: 2rem;
       color: #fff;
       width: $img-width;
@@ -84,20 +88,21 @@ form {
     bottom: 0;
     display: flex;
     justify-content: flex-end;
-    a{
+    label {
       text-decoration: none;
       background: #fff;
       opacity: 0.5;
       color: #444;
       padding: 0.6rem 1rem;
-      cursor: pointer;
       margin-left: 4px;
+
+      cursor: pointer;
     }
   }
 }
 
 @for $i from 1 through 3 {
-  #img#{$i}:target ~ .container {
+  #img#{$i}:checked ~ .container {
     left: -($i - 1) * $img-width;
   }
 }
