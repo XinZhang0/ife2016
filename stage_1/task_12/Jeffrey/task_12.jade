@@ -24,11 +24,11 @@ html(lang='zh')
         div.banner
             input(type="radio" name="banner" id='img1' hidden checked="checked")
             - for (var i=2;i<=3;++i)
-            input(type="radio" name="banner" id='img' + i hidden)
+                input(type="radio" name="banner" id='img' + i hidden)
             ul.container
                 li 1
                 li 2
                 li 3
             div.controller
                 - for (var i=1;i<=3;++i)
-                label(for='img' + i) #{i}
+                    label(for='img' + i) #{i}
