@@ -2,12 +2,16 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 table {
   margin: 50px;
   font-family: 微软雅黑;
-  font-size: 2em;
+  font-size: 1.9rem;
   color: #000;
 }
 table td {
@@ -34,11 +38,11 @@ form input {
   border-radius: 0.6rem;
   padding: 0.6rem;
   outline: none;
-  width: 10em;
-  transition: 0.5s width;
+  max-width: 10em;
+  transition: 0.25s max-width;
 }
 form input:focus {
-  width: 20em;
+  max-width: 13em;
   border-color: #6393ff;
 }
 
@@ -46,21 +50,21 @@ form input:focus {
   position: relative;
   margin: 50px;
   height: 300px;
-  width: 500px;
+  max-width: 450px;
   overflow: hidden;
 }
 .banner ul.container {
+  list-style: none;
   position: relative;
   transition: 0.5s left;
-  width: 1500px;
+  width: 1350px;
   height: 300px;
 }
 .banner ul.container li {
   float: left;
-  list-style: none;
   font-size: 2rem;
   color: #fff;
-  width: 500px;
+  width: 450px;
   height: 300px;
 }
 .banner ul.container li:nth-child(1) {
@@ -79,26 +83,27 @@ form input:focus {
   display: flex;
   justify-content: flex-end;
 }
-.banner .controller a {
+
+.banner .controller label {
   text-decoration: none;
   background: #fff;
   opacity: 0.5;
   color: #444;
   padding: 0.6rem 1rem;
-  cursor: pointer;
   margin-left: 4px;
+  cursor: pointer;
 }
 
-#img1:target ~ .container {
+#img1:checked ~ .container {
   left: 0px;
 }
 
-#img2:target ~ .container {
-  left: -500px;
+#img2:checked ~ .container {
+  left: -450px;
 }
 
-#img3:target ~ .container {
-  left: -1000px;
+#img3:checked ~ .container {
+  left: -900px;
 }
 
 /*# sourceMappingURL=task_12.css.map */
