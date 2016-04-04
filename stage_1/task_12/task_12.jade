@@ -1,0 +1,32 @@
+// Created by sam on 16-4-4.
+
+
+doctype html
+html(lang='zh')
+    head
+        link(type="text/css",rel="stylesheet",href='css/task_12.css')
+    body
+        table.tb
+            thead
+                tr
+                    td 排名
+                    td 网站
+                    td 热度
+            tbody
+                - for (var i=1;i<=10;++i)
+                    tr
+                        td #{i}.
+                        td 百度前端技术学院
+                        td #{14000 - i * 1000}
+        form
+            input(type="text" placeholder='点我宽度变化')
+        div.banner
+            - for (var i=1;i<=3;++i)
+                span(id='img' + i)
+            ul.container
+                li 1
+                li 2
+                li 3
+            div.controller
+                - for (var i=1;i<=3;++i)
+                     a(href='#img'+i) #{i}

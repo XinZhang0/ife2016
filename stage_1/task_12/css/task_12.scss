@@ -1,0 +1,103 @@
+@charset "UTF-8";
+$img-height: 300px;
+$img-width: 500px;
+$default-margin: 50px;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  margin: $default-margin;
+  font-family: 微软雅黑;
+  font-size: 2em;
+  color: #000;
+  td {
+    padding: 5px;
+  }
+
+  thead {
+    tr {
+      td {
+        background: #000;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(2n) {
+      background: #ccc;
+    }
+    tr:nth-child(-n+3) {
+      color: #f00;
+    }
+  }
+}
+
+form {
+  margin: $default-margin;
+  input {
+    font-size: 2rem;
+    border: 2px solid #ccc;
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    outline: none;
+    width: 10em;
+    transition: 0.5s width;
+  }
+  input:focus {
+    width: 20em;
+    border-color: #6393ff;
+  }
+
+}
+
+.banner {
+  position: relative;
+  margin: $default-margin;
+  height: $img-height;
+  width: $img-width;
+  overflow: hidden;
+  ul.container {
+    position: relative;
+    transition: 0.5s left;
+    width: 3*$img-width;
+    height: $img-height;
+    li {
+      float: left;
+      list-style: none;
+      font-size: 2rem;
+      color: #fff;
+      width: $img-width;
+      height: $img-height;
+    }
+    @for $i from 1 through 3 {
+      li:nth-child(#{$i}) {
+        background: #262*$i*0.5;
+      }
+    }
+  }
+  .controller {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    a{
+      text-decoration: none;
+      background: #fff;
+      opacity: 0.5;
+      color: #444;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+}
+
+@for $i from 1 through 3 {
+  #img#{$i}:target ~ .container {
+    left: -($i - 1) * $img-width;
+  }
+}

@@ -1,0 +1,39 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  border: 1px solid #f00;
+  width: 150px;
+  margin: 0;
+}
+.one{
+height: 120px;
+}
+.two{
+  height: 100px;
+}
+.three{
+  height: 40px;
+}
+.four{
+  height: 200px;
+}
+.container{
+  padding:20px;
+  border: 1px solid #ccc;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 647px){
+  .container{
+    align-items: flex-start;
+  }
+  .four{
+    order: -1;
+  }
+}
