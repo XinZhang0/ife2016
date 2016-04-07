@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+fieldset {
+    margin: 20px;
+}
+
+#aqi-chart-wrap {
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-top: 100px;
+}
+
+#wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.bar {
+    width: 100px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #ccc;
+    margin: 2px;
+}
+
+.detail {
+    position: absolute;
+    visibility: hidden;
+    font-size: 1rem;
+    z-index: 1;
+    background: #fff;
+    padding: 0.5rem;
+    border: 1px solid #418c59;
+    border-radius: 5px;
+    transform: translate(-15%, -110%);
+}
+
