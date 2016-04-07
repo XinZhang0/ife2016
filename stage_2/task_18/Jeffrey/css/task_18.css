@@ -1,0 +1,20 @@
+.editor, #error {
+    display: inline-block;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    padding: 1rem;
+    background: #ff0000;
+    margin: 5px;
+    word-break: break-all;
+    color: #fff;
+    text-align: center;
+}
+
+#room {
+    display: flex;
+    margin: 5px;
+    flex-wrap: wrap;
+}
