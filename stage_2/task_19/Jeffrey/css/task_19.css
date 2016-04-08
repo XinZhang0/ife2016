@@ -18,26 +18,19 @@ fieldset {
 }
 
 #wrap {
-    max-width: 1500px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .bar {
     width: 100px;
     cursor: pointer;
+    background: #72b16a;
     box-shadow: 1px 1px 1px #ccc;
-    margin: 2px;
+    margin: 1px;
 }
 
-.detail {
-    position: absolute;
-    visibility: hidden;
-    font-size: 1rem;
-    z-index: 1;
-    background: #fff;
-    padding: 0.5rem;
-    border: 1px solid #418c59;
-    border-radius: 5px;
-    transform: translate(-15%, -110%);
+#error {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
-

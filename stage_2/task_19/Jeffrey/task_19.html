@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <script src="task_19.js"></script>
+    <link rel="stylesheet" href="css/task_19.css">
+</head>
+<body>
+<fieldset id="form-gra-time">
+    <legend>选择排序</legend>
+    <div class="editor">
+        <span>插入数字：</span>
+        <input type="text" id="input" placeholder="输入100以内的正整数">
+        <br/><br/>
+        <button id="left-in">左侧入</button>
+        <button id="right-in">右侧入</button>
+        <button id="left-out">左侧出</button>
+        <button id="right-out">右侧出</button>
+        <br/><br/>
+        <span>随机数数量：</span>
+        <input type="text" id="num" value=100>
+        <br/><br/>
+        <input type="text" id="input-interval" value=10>
+        <button id="interval">间隔(单位：毫秒)</button>
+        <br/><br/>
+        <button id="select-sort">选择排序</button>
+        <button id="pop-sort">冒泡排序</button>
+        <button id="random-chart">随机生成</button>
+        <button id="stop">停止</button>
+        <br/><br/>
+        <div id="error"></div>
+    </div>
+
+</fieldset>
+
+<div id='wrap'>
+    <div id="sort-chart">
+    </div>
+</div>
+</body>
+</html>
